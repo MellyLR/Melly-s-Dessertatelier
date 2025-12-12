@@ -1,0 +1,399 @@
+/* Sayfa açılış animasyonu */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffeaf1, #fff6fb, #ffecef);
+    animation: fadeIn 1s ease;
+    color: #5a4a42;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header */
+header {
+    background-color: #ffccda;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #5a4a42;
+    letter-spacing: 1px;
+}
+
+/* Menü */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4a42;
+    padding: 10px 16px;
+    background-color: #ffe6ed;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #ffd3df;
+}
+
+nav a:hover {
+    background-color: #ffcedb;
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Hero */
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffeef4, #fff6fb);
+    color: #5a4a42;
+    border-radius: 20px;
+    margin: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+    font-size: 34px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Ana içerik */
+.content {
+    max-width: 750px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 28px;
+    border-radius: 22px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Başlıklar */
+h2 {
+    color: #d86f8f;
+    font-size: 28px;
+}
+
+/* Tarif listeleri */
+ul, ol {
+    padding-left: 22px;
+    line-height: 1.7;
+}
+
+/* Tarif kartları */
+.recipe-card {
+    background-color: white;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Resimler */
+img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Butonlar */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffb3c6;
+    color: #5a4a42;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #ff9eb5;
+    transform: scale(1.07);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffccda;
+    margin-top: 50px;
+    color: #5a4a42;
+    font-weight: 600;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        margin: 15px;
+        padding: 40px 10px;
+    }
+
+    .content {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+.nav-links li a {
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffb3da; /* Pastel pembe */
+    text-shadow: 0 0 8px #ffc7e8, 0 0 12px #ffdfff;
+}
+button, .btn {
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #ffe4f4 !important;
+    box-shadow: 0 0 12px #ffd6f3, 0 0 20px #ffe8fa;
+    transform: translateY(-2px);
+}
+.pastel-border {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.pastel-border::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(120deg,
+        #ffd6ff,
+        #e7c6ff,
+        #c8b6ff,
+        #b8c0ff,
+        #bbd0ff,
+        #b8c0ff,
+        #c8b6ff,
+        #e7c6ff,
+        #ffd6ff
+    );
+    background-size: 300% 300%;
+    animation: pastelGlow 6s ease infinite;
+    border-radius: 14px;
+    z-index: -1;
+}
+.pastel-border > * {
+    position: relative;
+    z-index: 2;
+    background: white;
+    border-radius: 10px;
+}
+@keyframes pastelGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* TARİF SAYFASI TASARIMI */
+
+.recipe-container {
+    width: 85%;
+    max-width: 800px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 18px;
+    border: 2px solid #ffd3d3;
+    box-shadow: 0 4px 10px rgba(255, 170, 170, 0.25);
+}
+
+.recipe-container h2 {
+    text-align: center;
+    color: #a63a3a;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.recipe-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff4f4;
+    border-radius: 15px;
+    border-left: 6px solid #ffb3b3;
+}
+
+.recipe-section h3 {
+    margin-bottom: 10px;
+    color: #c24343;
+}
+
+.recipe-section ul,
+.recipe-section ol {
+    padding-left: 20px;
+}
+
+.recipe-section li {
+    margin-bottom: 8px;
+}
+/* --- INDEX SAYFASI TASARIMI (Hero + Tarif Kartları + About) --- */
+
+/* Hero stil güçlendirme */
+.hero.pastel {
+    background: linear-gradient(135deg, #ffeaf3, #fff5fa);
+    border-radius: 25px;
+    margin: 35px auto;
+    max-width: 1100px;
+    padding: 70px 25px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+
+.hero .button {
+    margin-top: 15px;
+}
+
+/* Tarif önizleme bölümü */
+.recipes-preview {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.recipes-preview h2 {
+    font-size: 30px;
+    color: #d86f8f;
+}
+
+/* Kartların konteyneri */
+.preview-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Tek tek kartlar */
+.preview-card {
+    width: 300px;
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.preview-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Küçük buton */
+.button.small {
+    padding: 7px 14px;
+    font-size: 14px;
+}
+
+/* About küçük bölüm */
+.about-preview {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    background: #fff8fb;
+    padding: 35px 20px;
+    border-radius: 22px;
+    border: 2px solid #ffd6e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.about-preview h2 {
+    font-size: 28px;
+    color: #d86f8f;
+}
+
+.about-preview p {
+    font-size: 17px;
+    margin: 15px 0 25px;
+}
+
+/* M*
+/* HERO PASTEL FLOWERS */
+.hero.pastel {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero.pastel::before,
+.hero.pastel::after {
+    content: "✿ ✾ ❀";
+    position: absolute;
+    font-size: 45px;
+    color: rgba(255, 190, 210, 0.5);
+    animation: floatFlowers 9s infinite linear;
+}
+
+.hero.pastel::before {
+    top: -20px;
+    left: -20px;
+}
+
+.hero.pastel::after {
+    bottom: -20px;
+    right: -20px;
+    animation-duration: 12s;
+}
+
+@keyframes floatFlowers {
+    0% { transform: translateX(0) rotate(0); opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { transform: translateX(80px) rotate(15deg); opacity: 0.5; }
+}
+.pastel-strip {
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(90deg,
+        #ffd6e8, #ffe6f2, #e6d4ff, #ffd6e8
+    );
+    background-size: 300% 100%;
+    animation: slideStrip 8s linear infinite;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+@keyframes slideStrip {
+    0% { background-position: 0% 0; }
+    100% { background-position: 300% 0; }
+}
